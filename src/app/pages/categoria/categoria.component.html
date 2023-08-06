@@ -1,0 +1,46 @@
+<navbar></navbar>
+<sidebar></sidebar>
+
+
+<div class="container-base">
+
+    <div class="content-page">
+        <div class="card-header">
+            <div class="card-title">
+                Cadastro de Categoria
+            </div>
+        </div>
+
+        <form class="form-page" [formGroup]="categoriaForm" (submit)="enviar()">
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required />
+                    <label class="error-input" *ngIf="categoriaForm.get('name')?.errors?.['required'] &&
+                    categoriaForm.get('name')?.touched">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Sistemas</label>                   
+                   <ng-select class="select-padrao" [(ngModel)]="sistemaSelect" [items]="listSistemas"  bindLabel="name"  [multiple]="false" [clearable]="false" 
+                   [searchable]="false" formControlName="sistemaSelect" ></ng-select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="group-row">
+                    <input type="submit" value="Salvar" class="btn-primary" />
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

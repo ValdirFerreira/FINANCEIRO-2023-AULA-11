@@ -1,0 +1,56 @@
+<div class="container-login">
+
+    <div class="container-login-central">
+
+        <div class="container-header">
+            <div class="titulo-login">
+                Dev Net Core
+            </div>
+            <div class="info-login">
+                Digite seu email e senha para logar!
+            </div>
+
+        </div>
+
+
+        <div class="container-form">
+            <form class="form-inputs" [formGroup]="loginForm" (submit)="loginUser()">
+                <div class="group-input">
+                    <div class="text-info">
+                        Email
+                    </div>
+                    <input class="input-form" type="text" name="email" id="email" placeholder="E-Mail"
+                        formControlName="email" required="">
+
+                    <label *ngIf="loginForm.get('email')?.errors?.['required'] &&  loginForm.get('email')?.touched"
+                        class="error-input">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+
+                <div class="group-input">
+                    <div class="text-info">
+                        Senha
+                    </div>
+                    <input class="input-form" type="password" name="senha" id="senha" placeholder="Senha"
+                        formControlName="senha" required="">
+
+                    <label *ngIf="loginForm.get('senha')?.errors?.['required'] &&  loginForm.get('senha')?.touched"
+                        class="error-input">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+
+                <div class="group-input">
+                    <input type="submit" class="btn-login" value="Login" [ngClass]="{'disabled' : !loginForm.valid}"
+                        [disabled]="!loginForm.valid">
+
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,94 @@
+<navbar></navbar>
+<sidebar></sidebar>
+
+
+<div class="container-base">
+
+    <div class="content-page">
+        <div class="card-header">
+            <div class="card-title">
+                Cadastro de Despesas
+            </div>
+        </div>
+
+        <form class="form-page" [formGroup]="despesaForm" (submit)="enviar()">
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required />
+                    <label class="error-input" *ngIf="despesaForm.get('name')?.errors?.['required'] &&
+                    despesaForm.get('name')?.touched">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Valor</label>
+                    <input type="number" name="valor" id="valor" placeholder="Valor" formControlName="valor" required />
+                    <label class="error-input" *ngIf="despesaForm.get('valor')?.errors?.['required'] &&
+                    despesaForm.get('valor')?.touched">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Data de vencimento</label>
+                    <input type="date" name="data" id="data" placeholder="Data" formControlName="data" required />
+                    <label class="error-input" *ngIf="despesaForm.get('data')?.errors?.['required'] &&
+                    despesaForm.get('data')?.touched">
+                        Campo Obrigatório!
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- <div class="row">
+                <div class="group-row">
+                    <label>Sistemas</label>                   
+                   <ng-select class="select-padrao"  formControlName="sistemaSelect" [(ngModel)]="sistemaSelect" [items]="listSistemas"  bindLabel="name"  [multiple]="false" [clearable]="false" 
+                   [searchable]="false"></ng-select>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="group-row">
+                    <label>Categoria</label>                   
+                   <ng-select class="select-padrao" formControlName="categoriaSelect" [(ngModel)]="categoriaSelect" [items]="listCategorias"  bindLabel="name"  [multiple]="false" [clearable]="false" 
+                   [searchable]="false"></ng-select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="group-row">
+                            
+                        <mat-slide-toggle
+                            class="group-slide"
+                            [color]="color"
+                            [checked]="checked"
+                            [disabled]="disabled"
+                            (change)="handleChangePago($event)">
+                        Pago?
+                        </mat-slide-toggle>
+                  
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="group-row">
+                    <input type="submit" value="Salvar" class="btn-primary" />
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+.container-navbar {
+    background: #fefefe;
+    border: 1px solid #fefefe;
+    box-sizing: border-box;
+
+    box-shadow: 0px 0.5px 2px rgb(53 51 52 / 16%);
+    height: 72px;
+    display:flex;
+     position: fixed;
+    width: -webkit-fill-available;
+    z-index: 9999;
+}

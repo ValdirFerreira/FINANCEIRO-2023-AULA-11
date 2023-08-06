@@ -1,0 +1,48 @@
+<div class="container-sidebar">
+
+    <div class="grupo-menu">
+        <div class="container-icone-menu">
+            <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(1)"
+                [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 1, '':this.menuService.menuSelecionado!= 1}">
+                Dashboard
+            </div>
+        </div>
+    </div>
+
+    <div class="grupo-menu">
+        <div class="container-icone-menu">
+            <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(2)"
+                [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 2, '':this.menuService.menuSelecionado!= 2}">
+                Sistema
+            </div>
+        </div>
+    </div>
+
+    <div class="grupo-menu">
+        <div class="container-icone-menu">
+            <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(3)"
+                [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 3, '':this.menuService.menuSelecionado!= 3}">
+                Categoria
+            </div>
+        </div>
+    </div>
+
+    <div class="grupo-menu">
+        <div class="container-icone-menu">
+            <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(4)"
+                [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 4, '':this.menuService.menuSelecionado!= 4}">
+                Despesa
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grupo-menu">
+        <div class="container-icone-menu">
+            <div class="caixa-menu caixa-menu-texto"
+            (click)="selectMenu(100)"  >Sair</div>
+        </div>
+    </div>
+
+
+</div>

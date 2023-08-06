@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  background: #b4e7b6;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+input {
+  background: #ffffff;
+  box-sizing: border-box;
+  width: 397px;
+  height: 44px;
+  border: 1px solid #ccd4db;
+  border-radius: 4px;
+  padding: 8px;
+  color: #6e778b;
+
+font-size: 15px;
+font-family: "Poppins";
+
+}
+
+label {
+}
+
+.error-input {
+  font-size: 14px;
+  color: red;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4caf50;
+  border-color: #4caf50;
+  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2),
+  0 1px 5px 0 rgba(156, 39, 176, 0.12);
+
+  cursor: pointer;
+  min-width: 150px;
+  width: auto;
+}
+
+.container-base {
+  padding: 88px 16px 0px 128px;
+
+  .content-page {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    min-height: 800px;
+    min-width: 352px;
+
+    .card-header {
+      z-index: 3 !important;
+      width: 100%;
+      height: 80px;
+      background-color: #4caf50;
+      box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+      border-radius: 8px;
+      margin-bottom: 16px;
+
+      .card-title {
+        color: #fff;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .form-page {
+      display: grid;
+      justify-content: center;
+
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 16px;
+
+        .group-row {
+          display: grid;
+        }
+      }
+    }
+  }
+}
+
+
+.select-padrao {
+  background: #fefefe;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #1e1e1e;
+  width: 385px;
+  height: 42px;
+}
+
+::ng-deep .ng-select.ng-select-single .ng-select-container {
+  height: 36px !important;
+}
+
+::ng-deep .ng-select .ng-select-container {
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #acacac;
+  min-height: 42px;
+  align-items: center;
+}
